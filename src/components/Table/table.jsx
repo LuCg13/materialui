@@ -1,18 +1,27 @@
 import React from "react";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+  tableContainer: {
+    width: "80%",
+    margin: "20px auto", // Margen superior e inferior de 20px y centrado horizontal
+  },
+}));
 
 function TableComp() {
+  const classes = useStyles();
+
   // Dummy data for table
   const rows = [
-    { id: 1, name: "John Doe", age: 30, email: "john.doe@example.com" },
-    { id: 2, name: "Jane Smith", age: 28, email: "jane.smith@example.com" },
-    { id: 3, name: "Alice Johnson", age: 35, email: "alice.johnson@example.com" },
-    { id: 4, name: "Bob Brown", age: 40, email: "bob.brown@example.com" },
+    { id: 1, name: "John Doe", age: 30, email: "john@example.com" },
+    { id: 2, name: "Jane Doe", age: 28, email: "jane@example.com" },
+    { id: 3, name: "Alice Smith", age: 35, email: "alice@example.com" },
   ];
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} className={classes.tableContainer}>
+      <Table>
         <TableHead>
           <TableRow>
             <TableCell>ID</TableCell>

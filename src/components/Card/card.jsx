@@ -1,16 +1,26 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+  cardContainer: {
+    width: "80%",
+    margin: "20px auto", // Margen superior e inferior de 20px y centrado horizontal
+  },
+}));
 
 function CardComp() {
+  const classes = useStyles();
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className={classes.cardContainer}>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Example Card
+        <Typography variant="h5" component="div">
+          Card Title
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac turpis eu eros accumsan fringilla. Ut tincidunt, turpis vitae blandit
-          vestibulum, nulla diam faucibus est, nec faucibus nulla risus nec neque. Sed euismod sem eget est feugiat, sit amet lacinia velit interdum.
+        <Typography variant="body1">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, eum. Ad eveniet voluptas ipsum nobis delectus officia iste, quam incidunt
+          iure voluptatum debitis, tempora nesciunt consequuntur numquam suscipit architecto aspernatur.
         </Typography>
       </CardContent>
     </Card>
