@@ -1,6 +1,6 @@
 import React from "react";
 import { ImageList, ImageListItem, ImageListItemBar, IconButton } from "@mui/material";
-import { makeStyles } from "@emotion/react";
+import { makeStyles } from "@mui/styles";
 import InfoIcon from "@mui/icons-material/Info";
 
 const useStyles = makeStyles((theme) => ({
